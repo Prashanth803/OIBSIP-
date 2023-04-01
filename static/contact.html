@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Tilt+Warp&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <ul id="sidemenu">
+                <span class="in"><i class="fa-solid fa-square-xmark" onclick="closemenu()"></i></span>
+                <div id="logo">
+                    <img src='./images/logo.png' alt="404 error">
+                </div>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/cv.pdf">CV</a></li>
+
+            </ul>
+            <spam class="out"><i class="fa-solid fa-bars" onclick="openmenu()"></i></spam>
+        </nav>
+        <div class="cont">
+            <div class="image">
+                <img src="./images/conatct1.png" alt="loading">
+            </div>
+            <div class="details">
+                <div class="deta">
+                    <i class="fa-solid fa-envelope"></i> <span class="col">Email:<span
+                            id="nam">prashanth@gmail.com</span></span><br>
+                    <i class="fa-solid fa-phone"></i> <span class="col">Phone:9876543210</span><br>
+                </div>
+                <div>
+
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="change">
+            <h1>Your sugesstion</h1>
+            <div class="fromdet">
+
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Type your name" required>
+                    <input type="email" name="Email" placeholder="Type your email" required>
+                    <textarea name="Message" placeholder="Enter your sugesstion" cols="10" rows="10"></textarea>
+                    <button class="btn" type="submit">Submit</button>
+                </form>
+                <spam id="msg"></spam>
+            </div>
+        </div>
+        <footer>
+            Copyright © Prashath Chowdary|myportfolio.com All rights reserved
+        </footer>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0px";
+
+        }
+        function closemenu() {
+            sidemenu.style.right = "-260px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmKknQPbh1C6d6cYJcEsKdv2yXei1oR6wtZ4jSEnJxdNc1cTBAPdItE7q8LbQoVzeX/exec';
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Response saved sucessfully";
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
