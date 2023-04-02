@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food delivery website</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../app.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul id="love">
+            <span class="in"><i class="fa-solid fa-square-xmark" onclick="closemenu()"></i></span>
+            <img src="img/IMG_20220630_192930_086.jpg">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <spam class="out"><i class="fa-solid fa-bars" onclick="openmenu()"></i></spam>
+    </nav>
+    <div class="mainContainer">
+
+        <section class="home">
+            <div class="fortop">
+                <h1 class="he1">Welcome to the online food service</h1>
+                <p>A warm welcome to all my customers,feeling hungry "Don't worry",we can have your favorite dish served
+                    to
+                    your doorstep.Order wide variety of delicious foods from your desired restaurant and famous
+                    "Biryani"
+                    from the most skillful chef</p>
+                <p>NO more delay for and sate your hunger.Click on the order button to browse variety of foods and place
+                    order of your choice</p>
+                <button class="btn">Order now</button>
+            </div>
+        </section>
+        <div class="container">
+            <h1 class="con">Our services</h1>
+            <div class="services">
+                <div class="box1">
+                    <img src="../img/food4.jpg">
+                    <h2>Order delicious food</h2>
+                    <p>Buttered popcorn<br>Masala dosa<br>Potato chips<br>Seafood<br> And many more</p>
+                </div>
+                <div class="box1">
+                    <img src="../img/food5.jpg">
+                    <h2>Food catering</h2>
+                    <p>Wanna throw a party? Need a huge food suply for a ocassion.<br>No worries as we cater food based
+                        on
+                        your choices.Take a look at our packages.Flat 50% on first service.</p>
+                </div>
+                <div class="box1">
+                    <img src="../img/food6.jpg">
+                    <h2>Food delivery</h2>
+                    <p>We have the best delivery system all over the country.Making use of new technology including
+                        efficient traffic roads and drone system to avoid delivery delay.Come experience tthe fastest
+                        food
+                        delivery ever</p>
+                </div>
+
+            </div>
+            <div class="clients">
+                <h1>Our clients</h1>
+                <div class="division">
+                    <div class="d1" id="di1"><img src="./img/adidas.png"></div>
+                    <div class="d1" id="di2"><img src="./img/amazon.png"></div>
+                    <div class="d1" id="di3"><img src="./img/pepsi.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="center">
+            <p>Copyright &copy; www.onlinemealdelivery.com All rights reserved</p>
+        </div>
+    </footer>
+</body>
+<script>
+    var sidemenu=document.getElementById("love");
+    var intro=document.querySelector(".mainContainer");
+    function openmenu(){
+        sidemenu.style.right="0px";
+        intro.style.top="340px";
+    }
+    function closemenu(){
+        sidemenu.style.right="-260px";
+         intro.style.top="40px";
+    }
+</script>
+</html>

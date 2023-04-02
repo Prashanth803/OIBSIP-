@@ -1,0 +1,326 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+nav{
+    background-color:antiquewhite;
+    position: relative;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+}
+nav ul img{
+    width: 7rem;
+    height: 7rem;
+    padding:1rem;
+}
+nav ul li{
+    list-style-type: none;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    padding: .5rem;
+    color: rgb(197, 19, 19);
+}
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+.he1{
+    text-align: center;
+    font-size: 2rem;
+    color: yellow;
+}
+.home {
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    background: url('/img/food2.jpg') no-repeat center center/cover;
+
+  }
+  
+/* .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/img/food2.jpg') no-repeat center center/cover;
+    opacity: 0.5;
+  } */
+.home p{
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-size: 1.5rem;
+}
+.fortop{
+    position: absolute;
+    border-radius: 1rem;
+    top: 16rem;
+    width: 90%;
+    left:5%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.337);
+}
+.btn{
+    display: block;
+    margin: auto;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    color: brown;
+    border-radius: 7px;
+}
+
+.services{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    
+    justify-content: space-between;
+}
+.container h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.box1 img{
+    height: 11rem;
+    width: 14rem;
+    align-items: center;
+}
+.box1{
+    border: 1px solid rgb(128, 0, 2);
+    width: 30%;
+    min-height: 40%;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.324);  
+    text-align: center;  
+}
+.con{
+    color: #b72ca9;
+}
+.container{
+    position: relative;
+    background: url('/img/food9.jpeg') no-repeat center center/cover;
+    padding-left:5rem;
+    padding-right:5rem;
+    padding-bottom: 1rem;
+}
+
+.mainContainer{
+    height: 100%;
+}
+.division{
+    display: flex;
+}
+.clients h1{
+    color: #b72ca9;
+    text-align: center;
+    font-size: 2rem;
+}
+.services h2{
+    color:burlywood;
+    font-size: 2rem;
+}
+.services p{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.d1{
+    width: 40%;
+    height: 40%;
+    margin:0 1rem 0 1rem ;
+}
+.d1 img{
+   max-width: 100%;
+   height: auto;
+}
+.center{
+    background-color: black;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: solid;
+}
+.center p{
+    margin-top: 2rem;
+    color: white;
+
+}
+.in{
+    font-size: 2rem;
+    z-index: 2;
+
+}
+.out{
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    z-index: 2;
+    top: .3rem;
+}
+.in,.out{
+    display: none;
+}
+/* .container::before{
+    content: "";
+    background: url('/img/food9.jpeg')no-repeat center center/cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 150rem;
+    height: 100%;
+    z-index: -2;
+    opacity: .9;
+    opacity: .5;
+} */
+@media only screen and (max-width:955px) and (min-width:807px){
+ .services{
+    flex-direction: column;
+    align-items: center;
+ }
+ .box1{
+    width: 70%;
+    height: auto;
+    margin: 1rem;
+ }
+ 
+}
+@media only screen and (max-width:807px) and (min-width:665px){
+    .services{
+        flex-direction: column;
+        align-items: center;
+     }
+     .box1{
+        width: 70%;
+        height: auto;
+        margin: 1rem;
+     }
+    nav ul li a{
+        margin-right: .7rem;
+        font-size: 1.2rem;
+     }
+     .fortop{
+        top: 10rem;
+     }
+}
+@media only screen and (max-width:665px) and (min-width:524px){
+    .services{
+        flex-direction: column;
+        align-items: center;
+     }
+     .box1{
+        width: 70%;
+        height: auto;
+        margin: 1rem;
+     }
+     .fortop{
+        top: 10rem;
+     }
+     .out{
+        display: block;
+        top: 14px;
+        right:3px;
+        position: fixed;
+        font-size: 2rem;
+        z-index: -1;
+        color: rgb(227, 20, 20);
+    }
+    .in{
+        display: block;
+    }
+    .navbar ul img{
+        height:10rem;
+        width: 8rem;
+    }
+    .navbar ul{
+            background-color: rgb(30, 210, 171);
+            flex-direction: column;
+            position: fixed;
+            top:0;
+            right: -240px;
+            width: 240px;
+            height: 70vh;
+            border: 3px solid rgb(30, 210, 171);
+            border-radius: 7px;
+        }
+        .navbar ul li {
+            margin-left: 0rem;
+        }
+        .center p{
+            font-size: 1.5rem;
+        }
+}
+@media only screen and (max-width:524px){
+    .services{
+        flex-direction: column;
+        align-items: center;
+     }
+     .box1{
+        width: 70%;
+        height: auto;
+        margin: 1rem;
+     }
+     .fortop{
+        top: 10rem;
+     }
+     .out{
+        display: block;
+        top: 14px;
+        right:3px;
+        position: fixed;
+        font-size: 2rem;
+        z-index: -1;
+        color: rgb(227, 20, 20);
+    }
+    .in{
+        display: block;
+    }
+    .navbar ul img{
+        height:10rem;
+        width: 8rem;
+    }
+    .navbar ul{
+            background-color: rgb(30, 210, 171);
+            flex-direction: column;
+            position: fixed;
+            top:0;
+            right: -240px;
+            width: 240px;
+            height: 70vh;
+            border: 3px solid rgb(30, 210, 171);
+            border-radius: 7px;
+        }
+        .navbar ul li {
+            margin-left: 0rem;
+        }
+        .box1{
+            width: 90%;
+        }
+        .box1 img{
+            height: 9rem;
+            width:8rem;
+        }
+        .fortop{
+            top: 4rem;
+        }
+        .center p{
+            font-size: 1rem;
+        }
+}
