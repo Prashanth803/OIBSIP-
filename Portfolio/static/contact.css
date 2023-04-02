@@ -89,9 +89,11 @@ body {
 }
 .deta{
     margin: auto;
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 1rem;
 }
 .deta .col{
-    color: rgb(158, 110, 38);
+   color: rgb(12, 178, 23);
     bottom: 30px;
 }
 .deta i{
