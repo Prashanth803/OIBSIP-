@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/temp3.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.box{
+    background-color: rgba(0, 0, 0, 0.586);
+    border-radius: 2rem;
+    padding: 1rem 2rem 0 3rem;
+    color: azure;
+    width: 60%;
+    height: 80vh;
+    position: absolute;
+    left: 2rem;
+}
+.box h1{
+    text-align: center;
+    font-size: 3rem;
+    color: blueviolet;
+}
+/* .container{
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    grid-gap: 2rem;
+    overflow: hidden;
+} */
+.temp{
+    margin-left:.5rem;
+    color: darksalmon;
+    margin-top: 1rem;
+}
+/* .temp h2{
+    text-align: center;
+    position: relative;
+   
+} */
+.temp h2::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background: #ab1616;
+    left: 0;
+    bottom: -6px;
+    transition: 0.8s;
+}
+.converter{
+    font-size: 2rem;
+}
+.converter input,.btn,p{
+    font-size: 1.5rem;
+}
+.temp h2:hover::after{
+   width: 100%;
+}
+.temp h2:hover{
+    cursor: pointer;
+}
+.btn{
+    display: block;
+    margin: auto;
+    background-color: hotpink;
+    color: blanchedalmond;
+    font-size: 1rem;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.converter p{
+    font-size: 1.5rem;
+}
+#one,#two{
+    text-align: center;
+}
+#one,#two{
+    display: none;
+}
+#one1,#two2{
+    text-align: center;
+}
+#one1,#two2{
+    display: none;
+}
+@media only screen and (max-width:1025px) and (min-width:568px) and (max-height:500px){
+    .box h1 {
+        font-size: 2rem;
+    }
+    .temp h2{
+       font-size: 1.5rem;
+    }
+    .converter input,.btn{
+        font-size: 1rem;
+    }
+    .converter p{
+        font-size: 1rem;
+    }
+    body::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/temp4.jpeg) no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+@media only screen and (max-width:568px){
+    .box{
+        width: 60%;
+        left: 1rem;
+        height: 80vh;
+    }
+    .box h1 {
+        font-size: 1.8rem;
+    }
+    .temp h2{
+        font-size: 1.2rem;
+    }
+    .converter input,.btn{
+        font-size: 1rem;
+    }
+    .converter p{
+        font-size: 1rem;
+    }
+    body::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/temp4.jpeg) no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    input{
+        width: 50%;
+    }
+}

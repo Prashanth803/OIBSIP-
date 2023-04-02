@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Temperature Converter</h1>
+        <div class="container">
+        <div class="temp" id="ctf">
+            <h2 onclick="opentab()" id="ctfh"><input type="radio" name="cel" id="rad">Celsius</h2>
+            <div class="converter" id="c1">
+                <br>
+                <div id="one">
+                <p>Enter the Temperature in °C:<input type="number" placeholder="in °C" id="celcius"></p>
+                <br>
+                <button class="btn" type="button" onclick="convertctof()">Convert</button>
+            </div>
+                <p id="two">The Temperature in °F:<input type="number" placeholder="" id="farenheit"></p>
+            </div>
+        </div>
+        <div class="temp" id="ftc">
+            <h2 onclick="opentab1()" id="ftch"><input type="radio" name="far" id="rad">Farenheit</h2>
+            <div class="converter" id="c2">
+                <br>
+                <div id="one1">
+                <p>Enter the Temperature in °F:<input type="number" placeholder="in °F" id="farenheit1"></p>
+                <br>
+                <button class="btn" type="button" onclick="convertftoc()">Convert</button>
+            </div>
+                <p id="two2">The Temperature in °C:<input type="number" placeholder="" id="celcius1"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var one=document.getElementById("one");
+    var c2=document.getElementById("one1");
+    var two=document.getElementById("two");
+    var two1=document.getElementById("two2");
+    var ctc1=document.getElementById("ctfh");
+    var ctc2=document.getElementById("ftch");
+
+    function opentab(){
+        if(one.style.display=="block"){
+            one.style.display="none";
+            two.style.display="none";
+            ctc2.style.display="block";
+            document.getElementsByName('cel')[0].checked=false;
+        }
+        else{
+        one.style.display="block";
+        ctc2.style.display="none";
+        
+    }
+    }
+    function opentab1(){
+        if(c2.style.display=="block"){
+            c2.style.display="none";
+            two1.style.display="none";
+            ctc1.style.display="block";
+            document.getElementsByName('far')[0].checked=false;
+        }
+        else{
+        c2.style.display="block";
+        ctc1.style.display="none";
+       
+    }
+    }
+    function convertctof(){
+            var celsius = document.getElementById("celcius").value;
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("two").style.display="block";
+            document.getElementById("farenheit").value = fahrenheit;
+            one.style.display="none";
+            setTimeout(function () {
+                 document.getElementById("farenheit").value="";
+                 document.getElementById("farenheit1").value="";
+                 document.getElementById("celcius").value="";
+                 document.getElementById("celcius1").value="";
+                    }, 5000);
+                setTimeout(function () {
+                document.getElementById("two").style.display ="none";
+                document.getElementById("ftch").style.display ="block";
+                document.getElementsByName('cel')[0].checked=false;
+                },8000);
+    }
+    function convertftoc(){
+        var fahrenheit = document.getElementById("farenheit1").value;
+            var celsius = (fahrenheit - 32) * 5/9;
+            document.getElementById("two2").style.display="block";
+            document.getElementById("celcius1").value = celsius;
+            c2.style.display="none";
+            setTimeout(function () {
+                 document.getElementById("farenheit").value="";
+                 document.getElementById("farenheit1").value="";
+                 document.getElementById("celcius").value="";
+                 document.getElementById("celcius1").value="";
+                    }, 5000);
+                setTimeout(function () {
+                document.getElementById("two2").style.display ="none";
+                document.getElementById("ctfh").style.display ="block";
+                document.getElementsByName('far')[0].checked=false;
+                },8000);
+    }
+    
+                    
+
+</script>
+</body>
+</html>
